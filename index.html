@@ -1,37 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Apollo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Jade website template">
+    <meta name="keywords" content="apollo, jade, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="photography.html">Photography</a></li>
+    <section id="hero">
+        <header>
+            <div class="nav-toggle">
+                <p>Menu</p><span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#featured">Projects</a></li>
+                <li><a href="#three-slide">Gallery</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <button id="translate-btn" onclick="window.location.href='index_fr.html';">Français</button>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I am a computer science student with a passion for coding and photography. This website showcases my projects and some of my favorite photos.</p>
-        </section>
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="#">Project 1</a></li>
-                <li><a href="#">Project 2</a></li>
-                <li><a href="#">Project 3</a></li>
+        </header>
+        <div class="wrapper">
+            <div class="welcome">
+                <h1><strong>Mathias</strong> La Rochelle</h1>
+                <p>Welcome to my portfolio. My name is Mathias, and I am a 21-year-old computer science student with a passion for machine learning, environmentalism, and the impact of technology on society. I am also an avid reader, an amateur photographer, and someone who thrives on the joy of hard work.</p>
+            </div>
+            <div class="photographer"><img src="assets/img/full-slide/dinard.jpeg" alt="Photographer"></div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="wrapper">
+            <div class="camera"><img src="assets/img/full-slide/milkyway2024.JPG" alt="Camera"></div>
+            <div class="blurb">
+                <h2>Computer Science Student at Université de Montréal</h2>
+                <p>As a dedicated student, I am deeply passionate about machine learning and its potential to drive environmental change. I believe that while AI can significantly advance our capabilities, it is crucial to be mindful of its impact on human intelligence and societal behavior. My goal is to leverage technology to create sustainable solutions while maintaining a balance that fosters human growth and responsibility.</p>
+                <div class="social">
+                    <a href="https://github.com/mrquaternion" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mathias-la-rochelle/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <section id="featured">
+        <div class="wrapper">
+            <div class="blurb">
+                <h2>Projects</h2>
+                My project involved analyzing weather data to explore patterns and trends over nearly a decade. Using Python, Pandas, and Matplotlib, I cleaned and visualized the data to uncover insights about temperature changes in Canberra. The project highlighted the application of machine learning techniques for environmental data analysis, emphasizing the importance of data-driven decision-making in addressing climate change. You can check out the full project and code on my <a href="https://github.com/mrquaternion/ML-regression/blob/main/data_analysis.ipynb" target="_blank">GitHub repository</a>.</p>
+            </div>
+            <div class="featured"><img src="assets/img/project1.png" alt="Featured"></div>
+        </div>
+    </section>
+    <section id="three-slide">
+        <div class="wrapper">
+            <h2>Gallery</h2>
+            <ul class="slider">
+                <li class="back"><img src="assets/img/full-slide/sunset2.jpeg"></li>
+                <li class="current"><img src="assets/img/full-slide/stmalo.jpeg"></li>
+                <li class="front"><img src="assets/img/full-slide/eclipse.jpeg" style="transform: scale(1.2);"></li>
+                <li><img src="assets/img/full-slide/startrail.JPG" style="transform: scale(1.2);"></li>
+                <li><img src="assets/img/full-slide/sunset1.jpeg" style="transform: scale(1.1);"></li>
+                <li><img src="assets/img/full-slide/totality.JPG" style="transform: scale(0.9);"></li>
+                <li><img src="assets/img/full-slide/fire.JPG" style="transform: scale(0.7);"></li>
+                <li><img src="assets/img/full-slide/milkyway2023.jpeg" style="transform: scale(0.7);"></li>
+                <li><img src="assets/img/full-slide/milkyway2022.jpeg" style="transform: scale(0.8);"></li>
             </ul>
-        </section>
-    </main>
+        </div>
+        <i class="icon-chevron-thin-left prev"></i><i class="icon-chevron-thin-right next"></i>
+    </section>
+
+    <section id="resume" class="resume">
+        <div class="wrapper">
+            <h2>Resume</h2>
+            <div class="header">
+                <h2>Contact Information</h2>
+                <p><i class="fas fa-phone"></i> +1-819-930-4521</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:mathias.la.rochelle@umontreal.ca">mathias.la.rochelle@umontreal.ca</a>, <a href="mailto:mathiaslarochelle1@gmail.com">mathiaslarochelle1@gmail.com</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/mrquaternion">github.com/mrquaternion</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mathias-la-rochelle">linkedin.com/in/mathias-la-rochelle</a></p>
+            </div>
+            <div class="section">
+                <h2>Education</h2>
+                <div class="item">
+                    <h3>University of Montreal (2023-2026)</h3>
+                    <p>Bachelor in Computer Science with cumulative GPA: 3.6/4</p>
+                </div>
+                <div class="item">
+                    <h3>Cégep de l’Outaouais (2020-2022)</h3>
+                    <p>DEC in Natural Sciences</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Personal Projects</h2>
+                <div class="item">
+                    <h3>La compréhension des quaternions et leurs applications — Winter 2022</h3>
+                   
+                    <p><strong>Role:</strong> Project Manager</p>
+                    <p><strong>Technologies:</strong> LaTeX and Blender</p>
+                    <p><strong>Description:</strong> Teach people (and our supervisor) about the uncommon applications of quaternions in our daily life through a paper and an oral presentation.</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Technical Skills and Interests</h2>
+                <div class="item">
+                    <p><strong>Languages (Script & Programming):</strong> Java, Python, VHDL, Swift, MIPS architecture, HTML & CSS</p>
+                    <p><strong>Tools:</strong> Virtual Box, Quartus Prime & ModelSim, Git</p>
+                    <p><strong>IDE’s:</strong> Apache NetBeans, PyCharm, Visual Studio, Xcode</p>
+                    <p><strong>Cloud/Databases:</strong> Firebase</p>
+                    <p><strong>Soft Skills:</strong> LaTeX, Adobe Creative Suite, MS Office</p>
+                    <p><strong>Areas of Interest:</strong> Machine Learning (especially in environmental engineering), Quantum cryptography</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Languages</h2>
+                <div class="item">
+                    <p>Written and spoken: French & English</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 My Personal Website</p>
+        <p class="copyright">2024 © Mathias La Rochelle</p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="assets/js/functions-min.js"></script>
 </body>
 </html>
