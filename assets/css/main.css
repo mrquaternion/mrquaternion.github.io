@@ -266,18 +266,35 @@ footer {
 }
 
 
-#about .wrapper .blurb .social a {
-    color:#fff;text-decoration:none; margin-right: 20px;
-} 
-#about .wrapper .blurb .social i {
-    display:block;width:30px;height:30px;font-size:16px;text-align:center;line-height:30px;background-color:#909090;-webkit-transition:background-color .2s ease-in-out;transition:background-color .2s ease-in-out 
+#about .wrapper .blurb .social {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Use gap instead of margin-right for better spacing */
 }
+
+#about .wrapper .blurb .social a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#about .wrapper .blurb .social i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px; /* Adjust width and height to be the same */
+    height: 35px;
+    font-size: 22px; /* Adjust font size as needed */
+    text-align: center;
+    background-color: #909090;
+    transition: background-color 0.2s ease-in-out;
+}
+
 #about .wrapper .blurb .social i:hover {
-    background-color:#020202
+    background-color: #020202;
 }
 
 @media (max-width: 1024px) {
-    #about .wrapper .blurb .social  {
+    #about .wrapper .blurb .social {
         width: auto;
     }
 }
