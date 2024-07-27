@@ -308,7 +308,7 @@ footer {
     color: #111;
     text-decoration: none;
     cursor: pointer;
-    width: 170px;
+    width: 190px;
     box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
