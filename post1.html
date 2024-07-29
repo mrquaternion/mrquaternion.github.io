@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathias La Rochelle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #323232;
+        }
+
+        .content h2 {
+            color: #1561ad;
+        }
+
+        .top-panel {
+            height: 5vh;
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 95vh;
+        }
+
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .right-panel {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            width: 100%;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f0e9e6;
+            color: black;
+        }
+
+        .sidebar { 
+            display: none;
+        }
+        
+        .top {
+            grid-row: 1 / 2; 
+            grid-column: 1 / 2;
+            padding-right: 20px;
+        }
+
+        .content {
+            grid-row: 3 / 4; 
+            grid-column: 1 / 2;
+            line-height: 1.6;
+            text-align: justify;
+            padding-right: 20px;
+        }
+
+        .left-top {
+            background-color: #6482AD;
+            padding: 10px;
+        }
+
+        .left-top .navbar {
+            padding: 10px;
+        }
+
+        .left-top .navbar a {
+            all: unset;
+            color: white;
+        }
+
+        .left-bottom {
+            display: none;
+        }
+
+        .title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .subtitle {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            font-size: 0.8em;
+            color: #6b6b6b;
+            margin-bottom: 15px;
+        }
+
+        .img-container {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin-top: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .left-panel {
+                width: 30%;
+            }
+
+            .right-panel {
+                width: 70%;
+                grid-template-columns: 150px 1fr;
+                grid-template-rows: auto 1fr;
+            }
+
+            .sidebar {
+                display: block;
+                grid-row: 1 / 2; 
+                grid-column: 1 / 2; 
+                background-color: #323232;
+                width: 50%;
+                justify-self: end;
+                margin-right: 20px;
+            }
+
+            .top {
+                grid-column: 2 / 3;
+                padding-right: 50px;
+            }
+
+            .content {
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+                padding-right: 50px;
+            }
+
+            .left-bottom {
+                display: block;
+                height: 30%;
+                background-color: #7FA1C3;
+            }
+
+            .title {
+                font-size: 2.5em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .date {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-panel"></div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="left-top">
+                <div class="navbar">
+                    > <a href="blog.html">Retour</a> 
+                </div>
+            </div>
+            <div class="left-bottom"></div>
+        </div>
+        <div class="right-panel">
+            <div class="sidebar">&nbsp;</div>
+            <div class="top">
+                <h1 class="title">LAISSER SON CERVEAU APPRENDRE</h1>
+                <h2 class="subtitle">Pourquoi la neurotechnologie représente-t-elle une menace actuelle pour l'apprentissage ?</h2>
+                <div class="date">Le jeudi 25 juillet 2024</div>
+            </div>
+            <div class="content">
+                <p>Un avenir prometteur se dessine à l'horizon. L'ère des technologies cérébrales approche et tout le monde attend avec impatience de découvrir son potentiel. Imaginez pouvoir rédiger un courriel tout en remplissant un tableau Excel sans lever un seul petit doigt. Ce rêve pourrait bientôt devenir réalité. Cependant, est-ce vraiment ce que nous souhaitons, nous qui sommes les seuls êtres sur cette planète d’être dotés de la capacité de réfléchir et d’apprendre?</p>
+                <div class="img-container">
+                    <img src="./assets/img/manbirdcageashead.png" alt="Man with a birdcage's head - DALL-E 3">
+                </div>
+                <h2>UNE REMISE EN QUESTION</h2>
+                <p>L'humain a toujours su chercher à se rendre la vie plus facile. Depuis l'invention de la roue jusqu'à l'ère numérique, chaque progrès technologique a visé à alléger les tâches quotidiennes et à améliorer la qualité de vie. Cependant, cette quête incessante de commodité soulève une question fondamentale : pourquoi l'humain serait-il intéressé à mettre de côté son développement cognitif au profit de la facilité? Se rend-il pleinement compte de l'ampleur et des implications de cette tendance?</p>
+                <p>L'avènement des neurotechnologies offre à l'homme une manière de repousser les capacités de la cognition grâce à des neurostimulateurs et des interfaces cerveau-machine. Jusqu’à où l’humain devrait-il se fier à la technologie pour étendre son intellect?</p>
+                <p>Le cerveau humain a un don remarquable. Nous devrions être profondément reconnaissants de cette capacité qui nous distingue des autres espèces. Grâce à elle, nous sommes en mesure d’apprécier les relations humaines, la nature et d’autres formes d’art. Le futur de demain pourrait paraître superficiel. À mesure que nous nous concentrons de plus en plus sur l'élargissement de notre intellect et sur l'amélioration de nos capacités cognitives grâce aux avancées technologiques, nous risquons de perdre de vue les aspects simples et essentiels de la vie.</p>
+                <p>Aujourd'hui, c'est déjà en partie le cas. Les réseaux sociaux ont rendu l'homme bête, distrait par des activités superficielles qui n'apportent que peu de valeur réelle à notre existence. Défiler sur les publications Instagram, regarder une vidéo après l'autre sur YouTube, dévorer du contenu médiatique illusoire – ce sont tous des exemples de la négligence humaine envers son propre développement. Ces distractions numériques sont de grandes menaces à nos moments de réflexion profonde, nos interactions authentiques, et nos expériences enrichissantes qui constituent le cœur de la vie humaine.</p>
+            
+                <h2>UNE ATTAQUE À L’APPRENTISSAGE</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
