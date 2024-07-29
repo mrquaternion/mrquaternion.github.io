@@ -308,6 +308,16 @@ footer {
     background-color: #111;
 }
 
+#hero .wrapper .welcome p {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1023px) {
+    #hero .wrapper .welcome:after {
+        width: 0px;
+        height: 0px;
+    }
+}
 
 @media (min-width: 1024px) {
     .vertical-line {
