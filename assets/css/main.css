@@ -319,17 +319,6 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
-    .vertical-line {
-        min-width: 1px; /* Set a minimum width */
-        min-height: 40px; /* Set a minimum height */
-        width: 1px; /* Width of the vertical line */
-        height: 80px; /* Height of the vertical line */
-        background-color: black; /* Color of the vertical line */
-        margin-right: 20px; /* Space between the line and the button */
-    }
-}
-
 
 
 .blog-navbar {
