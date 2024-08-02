@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathias La Rochelle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #323232;
+        }
+
+        .content h2 {
+            color: #228B22;
+        }
+
+        .top-panel {
+            height: 5vh;
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 95vh;
+        }
+
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: #FF7F50;
+        }
+
+        .right-panel {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            width: 100%;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: white;
+            color: black;
+        }
+
+        .sidebar { 
+            display: none;
+        }
+        
+        .top {
+            grid-row: 1 / 2; 
+            grid-column: 1 / 2;
+            padding-right: 20px;
+        }
+        .top:after {
+            content: "";
+            width: 100%;
+            display: inline-block;
+            height: 3px;
+            background-color: #1a1a1a;
+        }
+
+        .content {
+            grid-row: 3 / 4; 
+            grid-column: 1 / 2;
+            line-height: 1.6;
+            text-align: justify;
+            padding-right: 20px;
+        }
+
+        .left-top {
+            background-color: #FFD300;
+            padding: 10px;
+        }
+
+        .left-top .navbar {
+            padding: 10px;
+        }
+
+        .left-top .navbar a {
+            all: unset;
+            color: white;
+        }
+
+        .left-bottom {
+            display: none;
+        }
+
+        .title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .subtitle {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            font-size: 0.8em;
+            color: #6b6b6b;
+            margin-bottom: 15px;
+        }
+
+        .img-container {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin-top: 15px;
+        }
+
+        @media (min-width: 979px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .left-panel {
+                width: 30%;
+            }
+
+            .right-panel {
+                width: 70%;
+                grid-template-columns: 150px 1fr;
+                grid-template-rows: auto 1fr;
+            }
+
+            .sidebar {
+                display: block;
+                grid-row: 1 / 2; 
+                grid-column: 1 / 2; 
+                background-color: #228B22;
+                width: 50%;
+                justify-self: end;
+                margin-right: 20px;
+            }
+
+            .top {
+                grid-column: 2 / 3;
+                padding-right: 50px;
+            }
+
+            .content {
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+                padding-right: 50px;
+            }
+
+            .left-bottom {
+                display: block;
+                height: 30%;
+                background-color: #FF7F50;
+            }
+
+            .title {
+                font-size: 2.5em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .date {
+                font-size: 0.9em;
+            }
+        }
+
+        .video-container {
+            position: relative;
+            padding-top: 56.25%; /* Aspect ratio for 16:9 */
+            height: 0;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #f0f0f0; /* Optional: for visual clarity */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-panel"></div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="left-top">
+                <p>Envie de discuter de cet article et d'échanger vos idées ? Rejoignez la conversation sur la <a href="https://medium.com/@mathiaslarochelle/reconnectez-vous-à-la-réalité-8394ab8356ec" style="text-decoration: underline;">version Medium</a> de cet article.</p>
+            </div>
+            <div class="left-bottom">
+                
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="sidebar">&nbsp;</div>
+            <div class="top">
+                <h1 class="title">RECONNECTEZ-VOUS À LA RÉALITÉ !</h1>
+                <div class="date">Le jeudi 1 août 2024</div>
+            </div>
+            <div class="content">
+                <p>Combien de fois vous êtes-vous déjà demandé : « Pourquoi suis-je en train de perdre mon temps sur mon téléphone ? ». Hélas, ce questionnement nous est survenu bien plus souvent qu’il ne le devrait.</p>
+                <img src="../assets/img/phone_usage.jpg" alt="Phone usage" style="width: 100%; height: auto;">
+                <p style="text-align: center;">Photo by <a href="https://unsplash.com/@hannahbusing">Hannah Busing</a> on <a href="https://unsplash.com">Unsplash</a></p>
+                <p>Depuis l’avènement d’Internet dans les années 90, l’humanité n’a jamais eu autant de moyens pour perdre son temps. Les réseaux sociaux, apparus dès les années 2000, ont profondément influencé la société actuelle et ce, souvent de manière négative.</p>
+    
+                <p>Cet article examine les conséquences de leur utilisation, notamment sur la santé mentale et physique, la dissociation du monde réel et les diverses formes d’addiction qu’ils ont engendrées. Nous nous concentrerons particulièrement sur leur impact chez les jeunes.</p>
+
+                <h2>Les impacts négatifs des réseaux sociaux</h2>
+                <h3>La santé mentale et physique</h3>
+                <p>Pourquoi nous comparerons-nous aux autres ? Est-ce inné chez l’humain de connaître les différences entre lui et un autre ? Ces questions ne sont pas surprenantes. Nous avons toujours voulu se comparer à autrui afin de se définir en tant que personne et de diminuer nos insécurités physiques et sociales. Cependant, l’arrivée des médias sociaux n’a fait qu’accélérer ce sentiment. Les taux d’anxiété, de dépression et de la perte d’estime de soi ont augmenté sans cesse chez les jeunes. De 2005 à 2017, la prévalence des épisodes majeurs de dépression chez les adolescents américains est passé de 8,7% à 13,2% soit une augmentation moyenne annuelle continue d’environ 0,38% (<a href="https://link.springer.com/article/10.1007/s00787-024-02373-2">Secular trends in risk factors for adolescent anxiety and depression symptoms: the Young-HUNT studies 1995–2019, Norway</a>).</p>
+                <h3>La dissociation du monde réel</h3>
+                <p>Nous avons tendance à nous dissocier du monde réel dès lors que notre
+                    téléphone intelligent se retrouve entre nos mains. Absorbés par les notifications et autres distractions, nous perdons la notion du temps, la conscience du moment présent et celle de l’environnement qui nous entoure. <a href="https://dl.acm.org/doi/fullHtml/10.1145/3491102.3501899">Selon une étude menée par des chercheurs de <em>The Association for Computing Machinery</em></a> (ACM), l’implémentation de certains styles de conception par les grands médias, tels que les fils de contenu personnalisés et le défilement infini, augmente la dissociation normative.</p>
+                <img src="../assets/img/lost.jpg" alt="Lost" style="width: 100%; height: auto;">
+                <p style="text-align: center;">Photo by <a href="https://unsplash.com/@inayali">Ali Inay</a> on <a href="https://unsplash.com">Unsplash</a></p>
+                <h3>Les addictions engendrées</h3>
+                <p>Les médias sociaux alimentent énormément le développement d’addictions chez les jeunes. Des plateformes comme Instagram, TikTok et Twitch promeuvent des fils médiatiques qui pervertissent l’esprit de la génération future. Au fil des années, le taux de consommation de contenu pornographique s’est accru sans cesse, selon une étude du <em>Journal of Adolescent Health</em>. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9853222/">Plus de 68 % des adolescents américains y ont été exposés</a>. Des mesures et des lois devraient être mises en place rigoureusement par nos gouvernements afin de protéger le cerveau de nos enfants. Rien n’est pris au sérieux. Leur manque de compétence fait en sorte que les parents doivent désormais s’en occuper, mais peu savent à quel point c’est un détriment au développement de leur jeune.</p>
+                <h2>Comment s’en sortir ?</h2>
+                <p>Le minimalisme digital est une approche du minimalisme qui met en avant la simplicité et la qualité en se concentrant sur les objets technologiques. Que l’on ait 15 ou 30 ans, ce mode de vie numérique permet de retrouver une vie ordonnée et un niveau de productivité jamais atteint auparavant.</p>
+                <h3>Supprimer toutes les applications de médias sociaux</h3>
+                <p>Supprimez toutes les applications de médias sociaux comme Instagram, Facebook, TikTok, Twitter.</p>
+                <img src="../assets/img/app_delete.jpg" alt="App deletion" style="width: 100%; height: auto;">
+                <p style="text-align: center;">Photo by <a href="https://unsplash.com/@dkfra19">Dimitri Karastelev</a> on <a href="https://unsplash.com">Unsplash</a></p>
+                <h3>Utiliser Beeper pour rester en contact</h3>
+                <p>Après la première étape, vous vous demanderez peut-être comment garder contact avec vos amis et votre famille. C’est pour cela que <a href="https://www.beeper.com">Beeper</a> existe, une plateforme de messagerie qui permet de connecter tous vos comptes d’applications de communication à un seul endroit.</p>
+                <h3>Installer des applications web ou des extensions de fureteur</h3>
+                <p>Certaines applications sont utiles et leur désinstallation peut rendre la vie plus difficile (ex: YouTube). Afin de pouvoir continuer à utiliser ces services sans retomber dans un excès de consommation digitale, voici quelques stratégies :</p>
+                <ul>
+                    <li><strong>Extensions qui réduisent les distractions</strong> : Utilisez des extensions qui permettent de retirer les notifications, les pages d’accueil qui attirent notre attention, et les vidéos courtes (appelées Shorts sur YouTube). Certaines extensions permettent également de diminuer la taille de la police et de supprimer les miniatures.</li>
+                    <li><strong>Applications de limitation de contenu </strong> : Des applications comme Freedom peuvent limiter tous types de contenu que vous leur indiquez de restreindre, vous aidant ainsi à rester concentré dans votre travail.</li>
+                    <li><strong>Gestion par un tiers</strong> : Si vous préférez que quelqu’un d’autre gère votre utilisation du téléphone, rendez-vous dans les paramètres de temps d’écran de votre appareil. Mettez-vous des limites raisonnables et demandez à un parent ou un ami de créer un mot de passe qu’ils garderont eux-mêmes.</li>
+                </ul>
+                <h3>Trouver quelque chose qui vous passionne</h3>
+                <p>Cela peut sembler évident, mais trouver une passion est une étape cruciale pour remplacer le temps que vous passiez sur les réseaux sociaux par des activités enrichissantes.</p>
+                <ul>
+                    <li><strong>Expérimentez et explorez</strong> : Essayez différentes activités, sujets ou domaines qui vous intéressent. N’hésitez pas à sortir de votre zone de confort. Participez à des ateliers, lisez des livres, rejoignez des clubs amateurs de sports et/ou loisirs.</li>
+                    <li><strong>Embrassez l’essai et l’erreur</strong> : Testez de nombreuses activités pour trouver ce qui résonne avec vous. Il est normal de ne pas trouver immédiatement ce qui vous passionne.</li>
+                </ul>
+                <p>Si vous voulez en connaître davantage, je vous conseille fortement d’aller visionner la vidéo ci-dessous.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ePIkWvtuatI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br>
+                <p>Bref, lâchez votre téléphone et reprenez le contrôle de votre temps. Ressaisissez-vous et ne laisser pas les réseaux sociaux dicter votre vie. Adopter des habitudes saines et trouver des passions qui enrichissent votre quotidien. Vous allez en être reconnaissant.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
