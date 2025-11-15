@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <title>Mathias La Rochelle</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="Mathias La Rochelle">
-    <meta name="description" content="Je m'appelle Mathias, et je suis un étudiant en informatique de 22 ans avec une passion pour l'apprentissage automatique, l'écologisme et l'impact de la technologie sur la société.">
-    <meta name="keywords" content="Mathias La Rochelle, Informatique, Apprentissage Automatique, Écologisme, Portfolio">
+    <meta name="application-name" content="Mathias La Rochelle">
+    <meta name="description" content="My name is Mathias, and I am a 22-year-old computer science student with a passion for machine learning, environmentalism, and the impact of technology on society.">
+    <meta name="keywords" content="Mathias La Rochelle, Computer Science, Machine Learning, Environmentalism, Portfolio">
 
-    <!-- Meta Tags Open Graph -->
+    <link rel="canonical" href="https://mathiaslarochelle.com/">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Mathias La Rochelle - Portfolio">
-    <meta property="og:description" content="Je m'appelle Mathias, et je suis un étudiant en informatique de 22 ans avec une passion pour l'apprentissage automatique, l'écologisme et l'impact de la technologie sur la société.">
+    <meta property="og:description" content="My name is Mathias, and I am a 22-year-old computer science student with a passion for machine learning, environmentalism, and the impact of technology on society.">
     <meta property="og:url" content="https://www.mathiaslarochelle.com">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.mathiaslarochelle.com/assets/img/logo_web.png">
@@ -32,38 +35,37 @@
                 <p>Menu</p><span></span>
             </div>
             <ul class="nav">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#featured">Projets</a></li>
-                <li><a href="#three-slide">Galerie</a></li>
-                <li><a href="#blog">Blogue</a></li>
-                <button id="translate-btn" onclick="window.location.href='index_en.html';">English</button> 
-            </ul> 
+                <li><a href="#about">About</a></li>
+                <li><a href="#featured">Projects</a></li>
+                <li><a href="#three-slide">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <button id="translate-btn" onclick="window.location.href='index_fr.html';">Français</button>
+            </ul>
         </header>
         <div class="wrapper">
             <div class="welcome">
                 <h1><strong>Mathias</strong> La Rochelle</h1>
                 <p style="text-align: justify;">
-                    Bienvenue dans mon portfolio. Je m'appelle Mathias, j'ai 22 ans et je suis étudiant en informatique passionné 
-                    par l'apprentissage automatique, l'environnementalisme et l'impact de la technologie sur la société. Je suis 
-                    également un photographe amateur et quelqu'un qui prospère grâce au plaisir de travailler dur.
+                    Welcome to my portfolio. My name is Mathias, and I am a 22-year-old computer science student with a passion for 
+                    machine learning, environmentalism, and the impact of technology on society. I am also an amateur photographer 
+                    and someone who thrives on the joy of hard work.
                 </p>
             </div>
-            <div class="photographer"><img src="assets/img/full-slide/dinard.jpeg" alt="Photographe"></div>
+            <div class="photographer"><img src="assets/img/full-slide/dinard.jpeg" alt="Photographer"></div>
         </div>
     </section>
     <section id="about">
         <div class="wrapper">
-            <div class="camera"><img src="assets/img/full-slide/milkyway2024.JPG" alt="Appareil photo"></div>
+            <div class="camera"><img src="assets/img/full-slide/milkyway2024.JPG" alt="Camera"></div>
             <div class="blurb">
-                <h2>Étudiant en informatique à l'Université de Montréal</h2>
+                <h2>Computer Science Student at Université de Montréal</h2>
                 <p style="text-align: justify;">
-                    En tant qu'étudiant dévoué, je suis passionné par la science des données et l'apprentissage automatique et 
-                    son potentiel à favoriser le changement environnemental. Je crois que, bien que l'IA puisse 
-                    considérablement améliorer nos capacités, il est crucial de prendre en compte son impact sur l'intelligence 
-                    humaine et le comportement sociétal. Mon objectif est de tirer parti de la technologie pour créer des solutions 
-                    durables tout en maintenant un équilibre qui favorise la croissance et la responsabilité humaines. Je m'intéresse 
-                    également à l'infographie (rendu dynamique, lancé de rayons, animations complexes) et la conception d'application 
-                    (plus spécifiquement dans l'écosystème Apple). 
+                    As a dedicated student, I am passionate about data science and machine learning, and their potential 
+                    to drive environmental change. I believe that while AI can significantly enhance our capabilities, it 
+                    is crucial to consider its impact on human intelligence and societal behavior. My goal is to leverage 
+                    technology to create sustainable solutions while maintaining a balance that promotes both human growth 
+                    and responsibility. I am also interested in computer graphics (dynamic rendering, ray tracing, complex 
+                    animations) and application design, particularly within the Apple ecosystem.
                 </p>
                 <div class="social">
                     <a href="https://github.com/mrquaternion" target="_blank"><i class="fab fa-github"></i></a>
@@ -73,27 +75,28 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
+    
     <section id="featured">
         <div class="wrapper">
             <div class="blurb">
-                <h2>Projets</h2>
+                <h2>Projects</h2>
             </div>
 
-            <!-- Projet 1 : CarbonSense Data Pipeline -->
+            <!-- Project 1: CarbonSense Data Pipeline -->
             <div class="projet">
                 <div class="texte">
                     <h3>CarbonSense Data Pipeline (CSDP)</h3>
                     <p>
-                        Développé durant l’été 2025, ce projet est un pipeline de traitement de données climatiques à grande échelle.
-                        Il exploite <strong>xarray</strong>, <strong>pandas</strong>, <strong>numpy</strong>, <strong>rioxarray</strong>
-                        et <strong>QGIS</strong> pour analyser les données ERA5 et produire des modèles capables d’estimer les flux
-                        de gaz à effet de serre. CSDP a été conçu pour tourner sur l’infrastructure de calcul haute performance de
-                        Calcul Canada, démontrant mon intérêt pour l’écologie et ma capacité à combiner programmation, géomatique
-                        et science des données.
+                        Developed during the summer of 2025, this project is a large-scale climate data processing pipeline. 
+                        It leverages <strong>xarray</strong>, <strong>pandas</strong>, <strong>numpy</strong>, 
+                        <strong>rioxarray</strong>, and <strong>QGIS</strong> to analyze ERA5 data and produce models capable 
+                        of estimating greenhouse gas fluxes. CSDP was designed to run on the high-performance computing 
+                        infrastructure of Compute Canada, showcasing my interest in ecology and my ability to combine 
+                        programming, geomatics, and data science.
                     </p>
                     <p>
-                        → Voir le dépôt GitHub :
+                        → View the GitHub repository: 
                         <a href="https://github.com/mrquaternion/CSDP" target="_blank">CarbonPipeline</a>
                     </p>
                 </div>
@@ -103,25 +106,25 @@
                 </div>
             </div>
 
-            <!-- Projet 2 : SportLink -->
+            <!-- Project 2: SportLink -->
             <div class="projet">
                 <div class="image">
                     <img src="assets/img/logo_sportlink.png" alt="SportLink logo">
                 </div>
 
                 <div class="texte">
-                    <h3><em>SportLink</em> (release prévu été 2026)</h3>
+                    <h3><em>SportLink</em> (planned release: Summer 2026)</h3>
                     <p>
-                        <em>SportLink</em> est une application mobile développée en <strong>SwiftUI</strong> 
-                        avec un backend <strong>Firebase</strong>, conçue pour faciliter l’organisation et la 
-                        découverte d’activités sportives locales. Elle permet aux utilisateurs de consulter 
-                        une carte interactive (via <strong>MapKit</strong>), de filtrer les infrastructures et 
-                        événements par sport, date ou localisation, et de créer ou rejoindre des activités. 
-                        L’application intègre également des fonctionnalités sociales telles que le suivi des 
-                        partenaires sportifs, la personnalisation via les disponibilités et sports favoris, 
-                        ainsi que des recommandations en temps réel.
+                        <em>SportLink</em> is a mobile application developed in <strong>SwiftUI</strong> 
+                        with a <strong>Firebase</strong> backend, designed to facilitate the organization 
+                        and discovery of local sports activities. It allows users to browse an interactive 
+                        map (via <strong>MapKit</strong>), filter infrastructures and events by sport, date, 
+                        or location, and create or join activities. The app also integrates social features 
+                        such as tracking sports partners, personalization through availabilities and favorite 
+                        sports, as well as real-time recommendations.
                     </p>
-                    <p>→ Site web                : 
+                    <p>
+                        → Website: 
                         <a href="https://sportlink-web.github.io" target="_blank">SportLink</a>
                     </p>
                 </div>
@@ -129,9 +132,10 @@
         </div>
     </section>
 
+
     <section id="three-slide">
         <div class="wrapper">
-            <h2>Galerie</h2>
+            <h2>Gallery</h2>
             <ul class="slider">
                 <li class="back"><img src="assets/img/full-slide/sunset2.jpeg"></li>
                 <li class="current"><img src="assets/img/full-slide/stmalo.jpeg"></li>
@@ -144,31 +148,25 @@
                 <li><img src="assets/img/full-slide/milkyway2023.jpeg" style="transform: scale(0.7);"></li>
                 <li><img src="assets/img/full-slide/capecod.jpg" style="transform: scale(0.75);"></li>
                 <li><img src="assets/img/full-slide/milkyway2022.jpeg" style="transform: scale(0.8);"></li>
-                
             </ul>
         </div>
         <i class="icon-chevron-thin-left prev"></i><i class="icon-chevron-thin-right next"></i>
     </section>
     <section id="blog" class="blog">
-        <div class="wrapper">
-            <h2>Blogue</h2>
-            <div class="blurb" style="text-align: justify;">
-                Vous pouvez retrouver <a href="blog.html">ici</a> un espace où je partage mes opinions sur certains sujets qui me 
-                passionnent. Ce projet de blog m'est venu à l'idée pendant mes lectures quotidiennes. Il a pour but unique d'être un 
-                espace d'expression personnelle.
+        <div class="wrapper"">
+            <h2>Blog</h2>
+            <div class="blurb" style="text-align: justify;" >
+                You can find <a href="blog.html">here</a> a space where I share my opinions on certain topics that I am passionate about. This blog project came to me during my daily readings. Its sole purpose is to be a space for personal expression.
             </div>
         </div>
     </section>
+   
 
-    <footer style="margin-top: 20px;">
-        <p>2025 © Mathias La Rochelle</p>
+    <footer style="margin-top: 20px;"> 
+        <p class="copyright">2025 © Mathias La Rochelle</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
     <script src="assets/js/functions-min.js"></script>
 </body>
 </html>
-
-
-
-
