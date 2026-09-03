@@ -33,6 +33,7 @@
             </div>
             <ul class="nav">
                 <li><a href="#about">À propos</a></li>
+                <li><a href="#experience">Expérience</a></li>
                 <li><a href="#featured">Projets</a></li>
                 <li><a href="#three-slide">Galerie</a></li>
                 <li><a href="#blog">Blogue</a></li>
@@ -48,6 +49,52 @@
                 </p>
             </div>
             <div class="photographer"><img src="assets/img/full-slide/milkyway2024.JPG" alt="Photographe"></div>
+        </div>
+    </section>
+    <section id="experience">
+        <div class="wrapper">
+            <div class="experience-heading">
+                <h2>Expérience</h2>
+            </div>
+            <article class="experience-card">
+                <div class="experience-topline">
+                    <div>
+                        <h3>Assistant de recherche · Scientifique des données</h3>
+                        <p class="experience-organization">Laboratoire Atmosbios</p>
+                    </div>
+                    <p class="experience-date">
+                        <time datetime="2025-05">Mai 2025</time> — <time datetime="2026-04">avril 2026</time>
+                    </p>
+                </div>
+                <div class="experience-copy">
+                    <p>
+                        Au laboratoire Atmosbios, j'ai conçu <em>CarbonCast</em>, un pipeline de données en Python qui récupère
+                        et traite les données de réanalyse climatique ERA5 de Copernicus pour la recherche sur le climat et les écosystèmes.
+                    </p>
+                    <p>
+                        J'ai développé des flux de travail configurables pour l'agrégation par polygones et l'extraction aux stations,
+                        le traitement de fichiers NetCDF, la préparation de prédicteurs AmeriFlux et de jeux de données prêts pour la
+                        modélisation, avec une prise en charge en ligne de commande et sur grappe de calcul pour des analyses reproductibles.
+                    </p>
+                    <a class="experience-link" href="https://github.com/mrquaternion/CarbonCast" target="_blank" rel="noopener noreferrer">
+                        Voir CarbonCast sur GitHub <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <div class="experience-gallery" aria-label="Sélection d'analyses climatiques réalisées avec CarbonCast">
+                    <figure>
+                        <img src="assets/img/experience/carboncast-delta-nee.png" alt="Carte mondiale illustrant les variations des échanges nets de l'écosystème">
+                        <figcaption>Échanges nets de l'écosystème (ΔNEE)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/experience/carboncast-relative-fluxes.png" alt="Cartes mondiales illustrant les variations relatives de la productivité primaire brute et de la respiration de l'écosystème">
+                        <figcaption>Flux de carbone relatifs (ΔGPP et ΔRECO)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/experience/carboncast-delta-le.png" alt="Carte mondiale illustrant les variations du flux de chaleur latente">
+                        <figcaption>Flux de chaleur latente (ΔLE)</figcaption>
+                    </figure>
+                </div>
+            </article>
         </div>
     </section>
     <section id="featured">

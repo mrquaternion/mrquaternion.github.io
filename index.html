@@ -36,6 +36,7 @@
             </div>
             <ul class="nav">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#featured">Projects</a></li>
                 <li><a href="#three-slide">Gallery</a></li>
                 <li><a href="#blog">Blog</a></li>
@@ -51,6 +52,52 @@
                 </p>
             </div>
             <div class="photographer"><img src="assets/img/full-slide/milkyway2024.JPG" alt="Photographer"></div>
+        </div>
+    </section>
+    <section id="experience">
+        <div class="wrapper">
+            <div class="experience-heading">
+                <h2>Experience</h2>
+            </div>
+            <article class="experience-card">
+                <div class="experience-topline">
+                    <div>
+                        <h3>Research Assistant · Data Scientist</h3>
+                        <p class="experience-organization">Atmosbios Lab</p>
+                    </div>
+                    <p class="experience-date">
+                        <time datetime="2025-05">May 2025</time> — <time datetime="2026-04">April 2026</time>
+                    </p>
+                </div>
+                <div class="experience-copy">
+                    <p>
+                        At Atmosbios Lab, I built <em>CarbonCast</em>, a Python data pipeline that retrieves and processes
+                        Copernicus ERA5 climate reanalysis data for climate and ecosystem research.
+                    </p>
+                    <p>
+                        I developed configuration-driven workflows for polygon aggregation and station-level extraction,
+                        NetCDF processing, AmeriFlux predictor preparation, and model-ready datasets, with command-line and
+                        compute-cluster support for reproducible analyses.
+                    </p>
+                    <a class="experience-link" href="https://github.com/mrquaternion/CarbonCast" target="_blank" rel="noopener noreferrer">
+                        View CarbonCast on GitHub <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <div class="experience-gallery" aria-label="Selected CarbonCast climate analyses">
+                    <figure>
+                        <img src="assets/img/experience/carboncast-delta-nee.png" alt="Global map visualizing changes in net ecosystem exchange">
+                        <figcaption>Net ecosystem exchange (ΔNEE)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/experience/carboncast-relative-fluxes.png" alt="Global maps showing relative changes in gross primary productivity and ecosystem respiration">
+                        <figcaption>Relative carbon fluxes (ΔGPP and ΔRECO)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/experience/carboncast-delta-le.png" alt="Global map visualizing changes in latent heat flux">
+                        <figcaption>Latent heat flux (ΔLE)</figcaption>
+                    </figure>
+                </div>
+            </article>
         </div>
     </section>
     <section id="featured">

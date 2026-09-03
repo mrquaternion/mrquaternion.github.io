@@ -329,6 +329,155 @@ textarea {
     font-family: var(--font-sans);
 }
 
+#experience {
+    position: relative;
+    box-sizing: border-box;
+    width: 1440px;
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 48px 0;
+    background-color: #efefef;
+}
+
+#experience .wrapper {
+    display: block;
+    width: 1180px;
+    max-width: 88%;
+    margin: 0 auto;
+}
+
+.experience-heading h2 {
+    margin: 0 0 30px;
+    font-family: var(--font-sans);
+    font-size: 42px;
+    font-weight: 100;
+}
+
+.experience-card {
+    box-sizing: border-box;
+    padding: 36px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 14px;
+    background-color: #fff;
+}
+
+.experience-topline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.experience-topline h3 {
+    margin: 0 0 4px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.experience-organization {
+    margin: 0;
+    color: #555;
+    font-weight: 600;
+}
+
+.experience-date {
+    flex-shrink: 0;
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.experience-copy {
+    max-width: 880px;
+    margin-top: 28px;
+}
+
+.experience-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #111;
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.experience-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 34px;
+}
+
+.experience-gallery figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.experience-gallery img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 499 / 391;
+    border: 1px solid rgba(17, 17, 17, 0.09);
+    border-radius: 8px;
+    background-color: #fff;
+    object-fit: contain;
+}
+
+.experience-gallery figcaption {
+    margin-top: 8px;
+    color: #666;
+    font-size: 13px;
+}
+
+.projet .texte h3 {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    #experience {
+        margin: 15px auto;
+        padding: 34px 0;
+    }
+
+    #experience .wrapper {
+        max-width: 90%;
+    }
+
+    .experience-heading h2 {
+        margin-bottom: 22px;
+        font-size: 30px;
+    }
+
+    .experience-card {
+        padding: 24px;
+    }
+
+    .experience-topline {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .experience-date {
+        margin-top: 0;
+    }
+
+    .experience-copy {
+        margin-top: 22px;
+    }
+
+    .experience-gallery {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 28px;
+    }
+}
+
 #featured {
     position: relative;
     width: 1440px;
