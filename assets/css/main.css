@@ -403,13 +403,15 @@ textarea {
     font-weight: 600;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
+    white-space: nowrap;
 }
 
 .project-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 22px;
-    margin-top: 6px;
+    row-gap: 14px;
+    column-gap: 36px;
+    margin-top: 14px;
 }
 
 .experience-gallery {
