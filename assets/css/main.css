@@ -395,7 +395,7 @@ textarea {
     margin-top: 28px;
 }
 
-.experience-link {
+.external-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -403,6 +403,13 @@ textarea {
     font-weight: 600;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin-top: 6px;
 }
 
 .experience-gallery {
