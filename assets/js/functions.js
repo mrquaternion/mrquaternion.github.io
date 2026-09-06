@@ -30,92 +30,94 @@ function smoothScroll(){
 }
 
 function threeSlider(){
-	
-	$('#three-slide .prev, #three-slide .next').click(function(){
-		
-		var $this = $(this),
-				curBack = $('.slider').find('.back'),
-				posBack = $('.slider').children().index(curBack),
-				curCurr = $('.slider').find('.current'),
-				posCurr = $('.slider').children().index(curCurr),
-				curFront = $('.slider').find('.front'),
-				posFront = $('.slider').children().index(curFront),
-				totalPics = $('.slider').children().length;
-				
-		$('.slider').addClass('swap');
-				
-		setTimeout(function(){
-				
-			if ($this.hasClass('next')){
-				
-				if (posFront < totalPics - 1 && posCurr < totalPics - 1 && posBack < totalPics - 1){
-					$('.back').removeClass('back').next().addClass('back');
-					$('.current').removeClass('current').next().addClass('current');
-					$('.front').removeClass('front').next().addClass('front');
-				}
-				
-				else {
-					
-					if (posFront === totalPics - 1){
-						$('.back').removeClass('back').next().addClass('back');
-						$('.current').removeClass('current').next().addClass('current');
-						$('.slider li').removeClass('front').first().addClass('front');
-					}
-					
-					else if (posCurr === totalPics - 1){
-						$('.back').removeClass('back').next().addClass('back');
-						$('.slider li').removeClass('current').first().addClass('current');
-						$('.front').removeClass('front').next().addClass('front');
-					}
-					
-					else {
-						$('.slider li').removeClass('back').first().addClass('back');
-						$('.current').removeClass('current').next().addClass('current');
-						$('.front').removeClass('front').next().addClass('front');
-					}
-					
-				}
-				
+	var $slider = $('#three-slide .slider'),
+			$slides = $slider.children('li'),
+			$status = $('#three-slide .carousel-status'),
+			totalSlides = $slides.length,
+			currentIndex = $slides.index($slides.filter('.current')),
+			touchStartX = null,
+			touchStartY = null;
+
+	if (!totalSlides){
+		return;
+	}
+
+	if (currentIndex < 0){
+		currentIndex = 0;
+	}
+
+	function updateSlides(){
+		$slides.removeClass('before back current front after');
+
+		$slides.each(function(index){
+			var forwardDistance = (index - currentIndex + totalSlides) % totalSlides,
+					positionClass;
+
+			if (forwardDistance === 0){
+				positionClass = 'current';
 			}
-			
+			else if (forwardDistance === 1){
+				positionClass = 'front';
+			}
+			else if (forwardDistance === totalSlides - 1){
+				positionClass = 'back';
+			}
+			else if (forwardDistance < totalSlides / 2){
+				positionClass = 'after';
+			}
 			else {
-				
-				if (posBack !== 0 && posCurr !== 0 && posFront !== 0){
-					$('.back').removeClass('back').prev().addClass('back');
-					$('.current').removeClass('current').prev().addClass('current');
-					$('.front').removeClass('front').prev().addClass('front');
-				}
-				
-				else {
-					
-					if (posBack === 0){
-						$('.slider li').removeClass('back').last().addClass('back');
-						$('.current').removeClass('current').prev().addClass('current');
-						$('.front').removeClass('front').prev().addClass('front');
-					}
-					
-					else if (posCurr === 0){
-						$('.back').removeClass('back').prev().addClass('back');
-						$('.slider li').removeClass('current').last().addClass('current');
-						$('.front').removeClass('front').prev().addClass('front');
-					}
-					
-					else {
-						$('.back').removeClass('back').prev().addClass('back');
-						$('.current').removeClass('current').prev().addClass('current');
-						$('.slider li').removeClass('front').last().addClass('front');
-					}
-					
-				}
-				
+				positionClass = 'before';
 			}
-			
-			$('.slider').removeClass('swap');
-			
-		}, 300);
-		
+
+			$(this)
+				.addClass(positionClass)
+				.attr('aria-hidden', positionClass === 'current' ? 'false' : 'true');
+		});
+
+		$status.text((currentIndex + 1) + ' / ' + totalSlides);
+	}
+
+	function moveSlider(direction){
+		currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+		updateSlides();
+	}
+
+	$('#three-slide .prev, #three-slide .next')
+		.on('click', function(){
+			moveSlider($(this).hasClass('next') ? 1 : -1);
+		})
+		.on('keydown', function(event){
+			if (event.key === 'Enter' || event.key === ' '){
+				event.preventDefault();
+				$(this).trigger('click');
+			}
+		});
+
+	$slider.on('touchstart', function(event){
+		var touch = event.originalEvent.touches[0];
+		touchStartX = touch.clientX;
+		touchStartY = touch.clientY;
 	});
-	
+
+	$slider.on('touchend', function(event){
+		var touch = event.originalEvent.changedTouches[0],
+				distanceX = touch.clientX - touchStartX,
+				distanceY = touch.clientY - touchStartY;
+
+		if (touchStartX !== null && Math.abs(distanceX) > 45 && Math.abs(distanceX) > Math.abs(distanceY)){
+			moveSlider(distanceX < 0 ? 1 : -1);
+		}
+
+		touchStartX = null;
+		touchStartY = null;
+	});
+
+	$slider.on('touchcancel', function(){
+		touchStartX = null;
+		touchStartY = null;
+	});
+
+	updateSlides();
 }
 
 

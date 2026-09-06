@@ -51,7 +51,7 @@
                     photographer and a sports enthusiast.
                 </p>
             </div>
-            <div class="photographer"><img src="assets/img/full-slide/milkyway2024.JPG" alt="Photographer"></div>
+            <div class="photographer"><img src="assets/img/hero-milkyway.jpg" alt="The Milky Way over a coastal landscape" width="1200" height="1800" decoding="async"></div>
         </div>
     </section>
     <section id="experience">
@@ -96,6 +96,40 @@
                         <img src="assets/img/experience/carboncast-delta-le.png" alt="Global map visualizing changes in latent heat flux">
                         <figcaption>Latent heat flux (ΔLE)</figcaption>
                     </figure>
+                </div>
+            </article>
+            <article class="experience-card experience-card--compact">
+                <div class="experience-topline">
+                    <div>
+                        <h3>Teaching Assistant</h3>
+                        <p class="experience-organization">Université de Montréal</p>
+                    </div>
+                    <p class="experience-date">
+                        <time datetime="2026-01">January 2026</time> — <time datetime="2026-04">April 2026</time>
+                    </p>
+                </div>
+                <div class="experience-copy">
+                    <p>
+                        Evaluated GitHub Classroom submissions for a C-based Operating Systems course, assessing student
+                        implementations of concurrency, memory management, and file systems.
+                    </p>
+                </div>
+            </article>
+            <article class="experience-card experience-card--compact">
+                <div class="experience-topline">
+                    <div>
+                        <h3>Student Tutor</h3>
+                        <p class="experience-organization">Université de Montréal</p>
+                    </div>
+                    <p class="experience-date">
+                        <time datetime="2024-09">September 2024</time> — <time datetime="2025-12">December 2025</time>
+                    </p>
+                </div>
+                <div class="experience-copy">
+                    <p>
+                        Provided one-on-one Python and Java tutoring during open sessions, helping undergraduate students
+                        understand course material and debug assignments.
+                    </p>
                 </div>
             </article>
         </div>
@@ -167,23 +201,24 @@
     <section id="three-slide">
         <div class="wrapper">
             <h2>Gallery</h2>
-            <ul class="slider">
-                <li class="back"><img src="assets/img/full-slide/sunset2.jpeg"></li>
-                <li class="current"><img src="assets/img/full-slide/stmalo.jpeg"></li>
-                <li class="front"><img src="assets/img/full-slide/eclipse.jpeg" style="transform: scale(1.2);"></li>
-                <li><img src="assets/img/full-slide/startrail.JPG" style="transform: scale(1.2);"></li>
-                <li><img src="assets/img/full-slide/totality.JPG" style="transform: scale(0.9);"></li>
-                <li><img src="assets/img/full-slide/sunset1.jpeg" style="transform: scale(1.1);"></li>
-                <li><img src="assets/img/full-slide/beach.JPG" style="transform: scale(1.1);"></li>
-                <li><img src="assets/img/full-slide/house.JPG" style="transform: scale(0.75);"></li>
-                <li><img src="assets/img/full-slide/milkyway2023.jpeg" style="transform: scale(0.7);"></li>
-                <li><img src="assets/img/full-slide/capecod.jpg" style="transform: scale(0.75);"></li>
-                <li><img src="assets/img/full-slide/milkyway2022.jpeg" style="transform: scale(0.8);"></li>
-                <li><img src="assets/img/full-slide/misty-cliff-coast.jpg" alt="A misty, forested cliff descending toward a rocky coastline" style="transform: scale(0.75);"></li>
-                <li><img src="assets/img/full-slide/ocean-sunset.jpg" alt="The sun setting over a calm ocean" style="transform: scale(0.75);"></li>
+            <ul class="slider" aria-label="Photography gallery">
+                <li class="back"><img loading="lazy" decoding="async" src="assets/img/full-slide/sunset2.jpeg"></li>
+                <li class="current"><img loading="lazy" decoding="async" src="assets/img/full-slide/stmalo.jpeg"></li>
+                <li class="front"><img loading="lazy" decoding="async" src="assets/img/full-slide/eclipse.jpeg" style="transform: scale(1.2);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/startrail.JPG" style="transform: scale(1.2);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/totality.JPG" style="transform: scale(0.9);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/sunset1.jpeg" style="transform: scale(1.1);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/beach.JPG" style="transform: scale(1.1);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/house.JPG" style="transform: scale(0.75);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/milkyway2023.jpeg" style="transform: scale(0.7);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/capecod.jpg" style="transform: scale(0.75);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/milkyway2022.jpeg" style="transform: scale(0.8);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/misty-cliff-coast.jpg" alt="A misty, forested cliff descending toward a rocky coastline" style="transform: scale(0.75);"></li>
+                <li><img loading="lazy" decoding="async" src="assets/img/full-slide/ocean-sunset.jpg" alt="The sun setting over a calm ocean" style="transform: scale(0.75);"></li>
             </ul>
         </div>
-        <i class="icon-chevron-thin-left prev"></i><i class="icon-chevron-thin-right next"></i>
+        <p class="carousel-status" aria-live="polite"></p>
+        <i class="icon-chevron-thin-left prev" role="button" tabindex="0" aria-label="Previous photo"></i><i class="icon-chevron-thin-right next" role="button" tabindex="0" aria-label="Next photo"></i>
     </section>
     <section id="blog" class="blog">
         <div class="wrapper">
@@ -200,6 +235,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-    <script src="assets/js/functions-min.js"></script>
+    <script src="assets/js/functions.js"></script>
 </body>
 </html>
