@@ -28,11 +28,11 @@
 <body>
     <section id="hero">
         <header>
-            <div class="nav-toggle">
-                <p>Menu</p><span></span>
-            </div>
-            <ul class="nav">
-                <li><a href="#about">À propos</a></li>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                Menu <span aria-hidden="true"></span>
+            </button>
+            <ul class="nav" id="site-menu" inert>
+                <li><a href="#hero">À propos</a></li>
                 <li><a href="#experience">Expérience</a></li>
                 <li><a href="#featured">Projets</a></li>
                 <li><a href="#three-slide">Galerie</a></li>
@@ -136,10 +136,14 @@
             <div class="blurb">
                 <h2>Projets</h2>
             </div>
-            <div class="projet">
-                <div class="image">
-                    <img src="assets/img/sportlink-icon_iOS.png" alt="SportLink logo">
-                </div>
+            <div class="projet projet--video">
+                <figure class="project-video">
+                    <video controls playsinline preload="none" poster="assets/img/sportlink-video-poster.jpg" width="540" height="960" aria-label="Aperçu de l’application SportLink">
+                        <source src="assets/video/sportlink-campaign.mp4" type="video/mp4">
+                        <a href="assets/video/sportlink-campaign.mp4">Voir l’aperçu de l’application SportLink</a>.
+                    </video>
+                    <figcaption>SportLink en action</figcaption>
+                </figure>
 
                 <div class="texte">
                     <h3>SportLink — Plateforme sociale pour activités sportives</h3>
